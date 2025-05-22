@@ -63,7 +63,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="bg-[#cc4733] fixed top-0 left-0 w-[100vw] h-[600px] md:h-[100vh]">
+      <div className="bg-[#cc4733] absolute md:fixed top-0 left-0 w-[100vw] h-[600px] md:h-[100vh]">
         <Image
           src="/assets/hero-bg.svg"
           fill={true}
@@ -71,7 +71,7 @@ const HeroSection = () => {
         />
         <div
           ref={cylinderImage}
-          className="w-[6vw] absolute left-[20%] top-[15%] min-h-[130px]"
+          className="w-[12vw] md:w-[6vw] absolute left-[10%] top-[28%] md:left-[20%] md:top-[15%] min-h-[130px]"
         >
           <Image
             src="/assets/Decorative-graphic-cylinder.svg"
@@ -81,7 +81,7 @@ const HeroSection = () => {
         </div>
         <div
           ref={heartImage}
-          className="w-[6vw] absolute inset-[auto_10%_15%_auto] min-h-[130px]"
+          className="w-[12vw] md:w-[6vw] absolute inset-[auto_20%_15%_auto] md:inset-[auto_10%_15%_auto] min-h-[130px]"
         >
           <Image
             src="/assets/Decorative-graphic-heart.svg"
@@ -91,8 +91,8 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="relative z-10">
-        <div className="h-[600px] md:h-screen w-screen fixed top-0 flex flex-col justify-center items-center z-10">
-          <h1 className="text-center text-[#f4e9dd] text-[15vw] md:text-[13vw] font-[Rubik] uppercase leading-[84%] max-w-[8ch] font-extrabold">
+        <div className="h-[600px] md:h-screen w-screen absolute md:fixed top-0 left-0 flex flex-col justify-center items-center z-10">
+          <h1 className="text-center text-[#f4e9dd] text-[15vw] md:text-[13vw] font-[Rubik] uppercase leading-[84%] max-w-[10ch] font-extrabold">
             Pizza
             <br />
             DI Maro
@@ -100,21 +100,21 @@ const HeroSection = () => {
           <h2 className="text-center text-[#f4e9dd] text-[6vw] md:text-[5vw] font-[Rubik] uppercase font-extrabold">
             From Italy with love
           </h2>
-          <div className="flex flex-col w-[80px] -rotate-90 justify-center absolute top-[50vh]  md:top-[80vh] right-0 md:left-0 bottom-0 rotate">
-            <div className="w-[80vh] flex items-center">
+          <div className="flex flex-col justify-end w-[600px] md:w-[80px] -rotate-90 md:justify-center absolute top-[0vh]  md:top-[80vh] right-0 md:left-0 bottom-10 rotate">
+            <div className="w-[540px] md:w-[80vh] flex items-center">
               <div className="rotate-line hidden md:block" />
-              <h3 className="text-[0.875rem] md:text-[2rem] font-bold uppercase leading-[32px] md:leading-[40px]">
+              <h3 className="text-[0.875rem] tracking-[0.8px] md:text-[2rem] font-bold uppercase leading-[32px] md:leading-[40px]">
                 from 12:00 PM everyday
               </h3>
             </div>
           </div>
         </div>
-        <div className="w-[90vw] mx-auto pt-[3vh] pb-[50vh] relative z-5">
+        <div className="w-[90vw] flex flex-col justify-center h-[600px] md:h-auto mx-auto py-0 md:pt-[3vh] md:pb-[50vh] relative z-5">
           <div className="grid grid-cols-2 gap-x-0 md:gap-x-[24vh] gap-y-[18vh] md:gap-y-[16vw] w-full">
             <div></div>
             <div
               ref={imageRef1}
-              className="max-w-[200px] w-[200px] h-[180px] max-h-[180px] md:max-w-[80%] md:w-[80%] md:max-h-[360px] md:h-[360px] relative"
+              className="w-[180px] h-[160px]  md:w-[80%] md:h-[360px] relative"
             >
               <Image
                 className="object-cover"
@@ -125,7 +125,7 @@ const HeroSection = () => {
             </div>
             <div
               ref={imageRef2}
-              className="max-w-[200px] w-[200px] h-[180px] max-h-[180px] md:max-w-[80%] md:w-[80%] md:max-h-[360px] md:h-[360px] relative"
+              className="w-[180px] h-[160px]  md:w-[80%] md:h-[360px] relative"
             >
               <Image
                 alt="Pizza Image"

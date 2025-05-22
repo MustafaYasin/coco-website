@@ -2,6 +2,7 @@
 
 body {
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .rotate-line {
@@ -96,4 +97,27 @@ body {
   background-attachment: scroll;
   padding-top: 200px;
   padding-bottom: 140px;
+}
+
+@media only screen and (max-width: 600px) {
+  .divider-text {
+    font-size: 6vw;
+    padding: 4px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+  }
+  .bg-sun-rotation {
+    background-position: 50% 53%;
+    background-size: 580%;
+    border: none;
+  }
+  .about-bg-size {
+    background-image: none;
+  }
+  .featured {
+    background-position: 0%;
+    background-size: 200px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 }

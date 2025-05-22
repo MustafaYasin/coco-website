@@ -40,11 +40,11 @@ const FeaturedSection = () => {
           Real good food Real good food Real good food Real good food
         </h3>
       </div>
-      <div className="max-w-[1380px] mx-auto relative z-10">
-        <h2 className="text-center max-w-[20ch] m-[0_auto_60px] text-black text-[3.75rem] font-['Rubik'] font-extrabold leading-[96%]">
+      <div className="max-w-[400px] md:max-w-[1380px] p-[6%] md:p-0 mx-auto relative z-10">
+        <h2 className="text-center max-w-[20ch] m-[0_auto_60px] text-black text-[1.5rem] md:text-[3.75rem] font-['Rubik'] font-extrabold leading-[96%]">
           Have you tasted our all-time-popular items? Must try, we promise! :)
         </h2>
-        <div className="grid gap-[16px] grid-cols-3 max-w-[1260px] mx-auto">
+        <div className="grid gap-[16px] grid-cols-1 md:grid-cols-3 max-w-[1260px] mx-auto">
           {PizzaCardsData.map((item) => (
             <FeaturedCard
               key={item.name}
