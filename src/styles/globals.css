@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  overflow-x: hidden;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.rotate-line {
+  background-image: linear-gradient(#0000 45%, #000 45% 55%, #0000 55%);
+  flex: 1;
+  align-self: auto;
+  height: 50px;
+  margin-right: 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.rotate {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+@keyframes marquee-loop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.loop-content-wrapper {
+  display: flex;
+  width: 200%;
+  animation: marquee-loop 20s linear infinite;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.loop-content-wrapper-fast {
+  display: flex;
+  width: 200%;
+  animation: marquee-loop 5s linear infinite;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.content-item-100vw {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4e9dd;
+  background-image: url("/assets/bg-slider.png");
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.divider-text {
+  font-size: 5vw;
+  font-family: "Rubik";
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 96%;
+  padding: 10px 15px;
+  border-left: 8px solid black;
+  border-right: 8px solid black;
+  background-color: #f4e9dd;
+}
+.stroke {
+  color: #45704c;
+  -webkit-text-fill-color: #45704c;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #f4e9dd;
+}
+.about-bg-size {
+  background-size: 3%;
+}
+
+.bg-sun-rotation {
+  background-color: #bf543c;
+  background-image: url("/assets/Sun-Rotate.svg");
+  background-position: 68%;
+  background-repeat: no-repeat;
+  background-size: 220%;
+  border: 0.8vh solid #000;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+}
+.featured {
+  position: relative;
+  z-index: 10;
+  background-image: url("/assets/featured-bg.png");
+  background-position: 50%;
+  background-size: 400px;
+  background-attachment: scroll;
+  padding-top: 200px;
+  padding-bottom: 140px;
 }
