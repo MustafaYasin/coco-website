@@ -52,24 +52,36 @@ const TestimonialSection = () => {
             <CustomerReviewCard text="Excellent pizza at a fair price. The restaurant does delivery and has some tables to stay. It's not big but worth to buy pizza there. The pleasure of having a pizza that just left the wood oven is awesome!" />
           </div>
           <div className="break-inside-avoid">
-            <ImageBlock src="/assets/customer-photo2.webp" height={648} />
+            <ImageBlock
+              src="/assets/customer-photo2.webp"
+              classes={"h-[264px] md:h-[648px]"}
+            />
           </div>
           <div className="break-inside-avoid">
-            <ImageBlock src="/assets/customer-photo1.webp" height={575} />
+            <ImageBlock
+              src="/assets/customer-photo1.webp"
+              classes={"h-[234px] md:h-[575px]"}
+            />
           </div>
 
           <div className="break-inside-avoid">
             <CustomerReviewCard text="Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." />
           </div>
           <div className="break-inside-avoid">
-            <ImageBlock src="/assets/customer-photo3.webp" height={371} />
+            <ImageBlock
+              src="/assets/customer-photo3.webp"
+              classes={"h-[151px] md:h-[371px]"}
+            />
           </div>
 
           <div className="break-inside-avoid">
             <CustomerReviewCard text="Perfect take-away! Wish they were more than that! This pizza is so good it blows your mind away. They look like a family run business. There is an eating area but it's small, I guess that's for waiting the delivery. The outside has a very beautiful orange sign that invites you in, boy that's some good-fresh tasty pizza! Great for take-aways, not so great if you want to eat inside." />
           </div>
           <div className="break-inside-avoid">
-            <ImageBlock src="/assets/customer-photo4.webp" height={549} />
+            <ImageBlock
+              src="/assets/customer-photo4.webp"
+              classes={"h-[223px] md:h-[549px]"}
+            />
           </div>
         </div>
         <div className="flex md:p-[40px_100px] py-[40px] gap-[16px] flex-wrap justify-around items-center">

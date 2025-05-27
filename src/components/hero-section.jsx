@@ -65,6 +65,13 @@ const HeroSection = () => {
     <>
       <div className="bg-[#cc4733] absolute md:fixed top-0 left-0 w-[100vw] h-[600px] md:h-[100vh]">
         <Image
+          className="block md:hidden"
+          src="/assets/hero-bg-mobile.svg"
+          fill={true}
+          alt="Hero Section Background Image"
+        />
+        <Image
+          className="hidden md:block"
           src="/assets/hero-bg.svg"
           fill={true}
           alt="Hero Section Background Image"
@@ -92,7 +99,7 @@ const HeroSection = () => {
       </div>
       <div className="relative z-10">
         <div className="h-[600px] md:h-screen w-screen absolute md:fixed top-0 left-0 flex flex-col justify-center items-center z-10">
-          <h1 className="text-center text-[#f4e9dd] text-[15vw] md:text-[13vw] font-[Rubik] uppercase leading-[84%] max-w-[10ch] font-extrabold">
+          <h1 className="text-center text-[#f4e9dd] text-[15vw] md:text-[13vw] uppercase leading-[84%] max-w-[10ch] font-extrabold">
             Pizza
             <br />
             DI Maro
