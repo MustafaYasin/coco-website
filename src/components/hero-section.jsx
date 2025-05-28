@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ImageBlock from "./image-block";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,11 +71,9 @@ const HeroSection = () => {
           fill={true}
           alt="Hero Section Background Image"
         />
-        <Image
-          className="hidden md:block"
+        <ImageBlock
+          classes="hidden md:block bg-cover min-w-screen min-h-screen h-screen"
           src="/assets/hero-bg.svg"
-          fill={true}
-          alt="Hero Section Background Image"
         />
         <div
           ref={cylinderImage}
