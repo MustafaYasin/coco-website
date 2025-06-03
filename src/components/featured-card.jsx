@@ -9,7 +9,7 @@ const FeaturedCard = ({ name, description, image }) => {
       </h3>
       <div className="p-[10%] flex relative">
         <div className="relative w-full h-[500px]">
-          <Image src={image} fill />
+          <Image src={image} fill objectFit="contain" />
         </div>
         <div className="w-[72px] h-[72px] absolute top-[20%] right-[6%]">
           <Image src="/assets/Decorative-small-cylinder.svg" fill />
