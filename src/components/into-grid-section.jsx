@@ -38,7 +38,7 @@ const IntroGridSection = () => {
         <div className="min-h-[35vh] md:min-h-[90vh] relative flex flex-col justify-center items-center">
           <div
             ref={pizzaRef}
-            className="max-w-[90%] w-full h-full max-h-[80%] bg-[url('/assets/into-pizza.webp')] bg-contain bg-no-repeat bg-center"
+            className="max-w-[90%] w-full h-full max-h-[80%] bg-[url('/assets/goat-cheese-light.png')] bg-contain bg-no-repeat bg-center"
           ></div>
 
           <div className="absolute top-[13%] left-[12%] md:top-[10%] md:left-[20%] w-[52px] h-[52px] md:w-[92px] md:h-[92px]">
@@ -62,7 +62,7 @@ const IntroGridSection = () => {
             OUR love is <br />
             <span className="stroke">pizza </span>
             shaped.
-            <br /> Won’t you have a slice?
+            <br /> Won't you have a slice?
           </h2>
           <h2 className="text-[#f4e9dd] font-['Rubik'] uppercase text-[10vw] md:text-[5vw] font-extrabold leading-[98%] mb-[20px]">
             🍕👍

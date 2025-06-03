@@ -45,11 +45,6 @@ export const PizzaCardsData = [
     image: "/assets/goat-cheese.webp",
   },
   {
-    name: "Kurkuma",
-    description: "Delicious Kurkuma",
-    image: "/assets/kurkuma.webp",
-  },
-  {
     name: "Potatoes",
     description: "Delicious Potatoes",
     image: "/assets/potatoes.webp",
