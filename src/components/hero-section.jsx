@@ -124,7 +124,7 @@ const HeroSection = () => {
             >
               <Image
                 className="object-cover"
-                alt="Pizza Image"
+                alt="Tapas Image"
                 src={"/assets/pizza-hero-1.webp"}
                 fill
               />
@@ -134,7 +134,7 @@ const HeroSection = () => {
               className="w-[180px] h-[160px]  md:w-[80%] md:h-[360px] relative"
             >
               <Image
-                alt="Pizza Image"
+                alt="Tapas Image"
                 className="object-cover -rotate-[75deg]"
                 src={"/assets/pizza-hero-2.webp"}
                 fill

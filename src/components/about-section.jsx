@@ -112,7 +112,7 @@ const AboutSection = () => {
             I FOLLOWED <br />
             MY HEART AND
             <br /> IT LED ME TO
-            <br /> PIZZA
+            <br /> TAPAS
           </h2>
           <p className="max-w-[52ch] mb-[20px] text-[1rem] md:text-[1.25rem] leading-[128%] text-black font-medium font-['Rubik']">
             Praesent eget aliquam elit. Nullam lobortis eleifend massa, eget
@@ -137,7 +137,7 @@ const AboutSection = () => {
             >
               <Image
                 className="object-cover "
-                alt="Pizza Image"
+                alt="Tapas Image"
                 src={"/assets/about-img-1.webp"}
                 fill
               />
@@ -147,7 +147,7 @@ const AboutSection = () => {
               className=" mx-auto w-[75%] h-[360px] md:h-[620px] relative"
             >
               <Image
-                alt="Pizza Image"
+                alt="Tapas Image"
                 className="object-cover "
                 src={"/assets/about-img-2.webp"}
                 fill
@@ -158,7 +158,7 @@ const AboutSection = () => {
               className=" mx-auto w-[75%] h-[360px] md:h-[620px] relative"
             >
               <Image
-                alt="Pizza Image"
+                alt="Tapas Image"
                 className="object-cover "
                 src={"/assets/about-img-3.webp"}
                 fill
