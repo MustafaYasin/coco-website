@@ -64,15 +64,15 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="bg-[#cc4733] absolute md:fixed top-0 left-0 w-[100vw] h-[600px] md:h-[100vh]">
+      <div className="bg-[#004529] absolute md:fixed top-0 left-0 w-[100vw] h-[600px] md:h-[100vh]">
         <Image
-          className="block md:hidden"
+          className="block md:hidden opacity-20"
           src="/assets/hero-bg-mobile.svg"
           fill={true}
           alt="Hero Section Background Image"
         />
         <ImageBlock
-          classes="hidden md:block bg-cover min-w-screen min-h-screen h-screen"
+          classes="hidden md:block bg-cover min-w-screen min-h-screen h-screen opacity-20"
           src="/assets/hero-bg.svg"
         />
         <div
@@ -101,10 +101,10 @@ const HeroSection = () => {
           <h1 className="text-center text-[#f4e9dd] text-[15vw] md:text-[13vw] uppercase leading-[84%] max-w-[10ch] font-extrabold">
             COCO
             <br />
-            <span className="text-[11vw] md:text-[9vw]">Tapas & Bar</span>
+            <span className="text-[11vw] md:text-[9vw]">Tapasbar</span>
           </h1>
-          <h2 className="text-center text-[#f4e9dd] text-[6vw] md:text-[5vw] font-[Rubik] uppercase font-extrabold">
-            From Munich with love
+          <h2 className="text-center text-[#f4e9dd] text-[6vw] md:text-[5vw] font-[Rubik] font-extrabold">
+            From Munich with Love
           </h2>
           <div className="flex flex-col justify-end w-[600px] md:w-[80px] -rotate-90 md:justify-center absolute top-[0vh]  md:top-[80vh] right-0 md:left-0 bottom-10 rotate">
             <div className="w-[540px] md:w-[80vh] flex items-center">
