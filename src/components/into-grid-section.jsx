@@ -20,11 +20,12 @@ const IntroGridSection = () => {
           toggleActions: "play none none none",
         },
         rotate: -540,
-        scale: 0.1,
+        scale: 0.5, // Start at 50% of original size
         duration: 1.6,
         delay: 0.3,
         ease: "power3.out",
       });
+
     };
 
     if (typeof window !== "undefined" && pizzaRef.current) {
