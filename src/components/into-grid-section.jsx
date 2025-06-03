@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useRef, useEffect } from "react";
 
 const IntroGridSection = () => {
-  const pizzaRef = useRef(null);
+  const animatedImageRef = useRef(null);
 
   useEffect(() => {
     const animate = async () => {
@@ -13,21 +13,22 @@ const IntroGridSection = () => {
 
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.from(pizzaRef.current, {
+      gsap.from(animatedImageRef.current, {
         scrollTrigger: {
-          trigger: pizzaRef.current,
+          trigger: animatedImageRef.current,
           start: "top 80%",
           toggleActions: "play none none none",
         },
         rotate: -540,
-        scale: 0.1,
+        scale: 0.5, // Start at 50% of original size
         duration: 1.6,
         delay: 0.3,
         ease: "power3.out",
       });
+
     };
 
-    if (typeof window !== "undefined" && pizzaRef.current) {
+    if (typeof window !== "undefined" && animatedImageRef.current) {
       animate();
     }
   }, []);
@@ -37,8 +38,8 @@ const IntroGridSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[16px] gap-y-0">
         <div className="min-h-[35vh] md:min-h-[90vh] relative flex flex-col justify-center items-center">
           <div
-            ref={pizzaRef}
-            className="max-w-[90%] w-full h-full max-h-[80%] bg-[url('/assets/into-pizza.webp')] bg-contain bg-no-repeat bg-center"
+            ref={animatedImageRef}
+            className="max-w-[90%] w-full h-full max-h-[80%] bg-[url('/assets/goat-cheese-light.png')] bg-contain bg-no-repeat bg-center"
           ></div>
 
           <div className="absolute top-[13%] left-[12%] md:top-[10%] md:left-[20%] w-[52px] h-[52px] md:w-[92px] md:h-[92px]">
@@ -60,12 +61,12 @@ const IntroGridSection = () => {
         <div className="bg-[#45704c] py-[40px] md:py-0 flex flex-col justify-center items-start px-[4vw]">
           <h2 className="text-[#f4e9dd] font-['Rubik'] uppercase text-[10vw] md:text-[5vw] font-extrabold leading-[98%] mb-[20px]">
             OUR love is <br />
-            <span className="stroke">pizza </span>
+            <span className="stroke">Tapas </span>
             shaped.
-            <br /> Won’t you have a slice?
+            <br /> Won't you have a slice?
           </h2>
           <h2 className="text-[#f4e9dd] font-['Rubik'] uppercase text-[10vw] md:text-[5vw] font-extrabold leading-[98%] mb-[20px]">
-            🍕👍
+            <unknown>😋</unknown>👍
           </h2>
         </div>
       </div>

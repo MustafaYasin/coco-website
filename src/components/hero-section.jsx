@@ -99,12 +99,12 @@ const HeroSection = () => {
       <div className="relative z-10">
         <div className="h-[600px] md:h-screen w-screen absolute md:fixed top-0 left-0 flex flex-col justify-center items-center z-10">
           <h1 className="text-center text-[#f4e9dd] text-[15vw] md:text-[13vw] uppercase leading-[84%] max-w-[10ch] font-extrabold">
-            Pizza
+            COCO
             <br />
-            DI Maro
+            <span className="text-[11vw] md:text-[9vw]">Tapas & Bar</span>
           </h1>
           <h2 className="text-center text-[#f4e9dd] text-[6vw] md:text-[5vw] font-[Rubik] uppercase font-extrabold">
-            From Italy with love
+            From Munich with love
           </h2>
           <div className="flex flex-col justify-end w-[600px] md:w-[80px] -rotate-90 md:justify-center absolute top-[0vh]  md:top-[80vh] right-0 md:left-0 bottom-10 rotate">
             <div className="w-[540px] md:w-[80vh] flex items-center">
@@ -124,7 +124,7 @@ const HeroSection = () => {
             >
               <Image
                 className="object-cover"
-                alt="Pizza Image"
+                alt="Tapas Image"
                 src={"/assets/pizza-hero-1.webp"}
                 fill
               />
@@ -134,7 +134,7 @@ const HeroSection = () => {
               className="w-[180px] h-[160px]  md:w-[80%] md:h-[360px] relative"
             >
               <Image
-                alt="Pizza Image"
+                alt="Tapas Image"
                 className="object-cover -rotate-[75deg]"
                 src={"/assets/pizza-hero-2.webp"}
                 fill

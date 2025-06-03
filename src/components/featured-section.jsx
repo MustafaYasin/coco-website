@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import FeaturedCard from "./featured-card";
-import { PizzaCardsData } from "../../static-data";
+import { TapasCardsData } from "../../static-data";
 
 const FeaturedSection = () => {
   const textRef = useRef(null);
@@ -45,7 +45,7 @@ const FeaturedSection = () => {
           Have you tasted our all-time-popular items? Must try, we promise! :)
         </h2>
         <div className="grid gap-[16px] grid-cols-1 md:grid-cols-3 max-w-[1260px] mx-auto">
-          {PizzaCardsData.map((item) => (
+          {TapasCardsData.map((item) => (
             <FeaturedCard
               key={item.name}
               name={item.name}
