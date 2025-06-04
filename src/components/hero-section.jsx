@@ -99,7 +99,7 @@ const HeroSection = () => {
       <div className="relative z-10">
         <div className="h-[600px] md:h-screen w-screen absolute md:fixed top-0 left-0 flex flex-col justify-center items-center z-10">
           <h1 className="text-center text-[#f4e9dd] text-[15vw] md:text-[13vw] leading-[84%] max-w-[10ch] font-extrabold">
-            <span className="uppercase">COCO</span>
+            <span className="uppercase" style={{ WebkitTextStroke: '4px black' }}>COCO</span>
             <br />
             <span className="text-[11vw] md:text-[9vw]">Tapas & Bar</span>
           </h1>
