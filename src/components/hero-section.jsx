@@ -98,10 +98,10 @@ const HeroSection = () => {
       </div>
       <div className="relative z-10">
         <div className="h-[600px] md:h-screen w-screen absolute md:fixed top-0 left-0 flex flex-col justify-center items-center z-10">
-          <h1 className="text-center text-[#f4e9dd] text-[15vw] md:text-[13vw] uppercase leading-[84%] max-w-[10ch] font-extrabold">
-            COCO
+          <h1 className="text-center text-[#f4e9dd] text-[15vw] md:text-[13vw] leading-[84%] max-w-[10ch] font-extrabold">
+            <span className="uppercase">COCO</span>
             <br />
-            <span className="text-[11vw] md:text-[9vw]">Tapasbar</span>
+            <span className="text-[11vw] md:text-[9vw]">Tapas & Bar</span>
           </h1>
           <h2 className="text-center text-[#f4e9dd] text-[6vw] md:text-[5vw] font-[Rubik] font-extrabold">
             From Munich with Love
@@ -118,28 +118,8 @@ const HeroSection = () => {
         <div className="w-[90vw] flex flex-col justify-center h-[600px] md:h-auto mx-auto py-0 md:pt-[3vh] md:pb-[50vh] relative z-5">
           <div className="grid grid-cols-2 gap-x-0 md:gap-x-[24vh] gap-y-[18vh] md:gap-y-[16vw] w-full">
             <div></div>
-            <div
-              ref={imageRef1}
-              className="w-[180px] h-[160px]  md:w-[80%] md:h-[360px] relative"
-            >
-              <Image
-                className="object-cover"
-                alt="Tapas Image"
-                src={"/assets/pizza-hero-1.webp"}
-                fill
-              />
-            </div>
-            <div
-              ref={imageRef2}
-              className="w-[180px] h-[160px]  md:w-[80%] md:h-[360px] relative"
-            >
-              <Image
-                alt="Tapas Image"
-                className="object-cover -rotate-[75deg]"
-                src={"/assets/pizza-hero-2.webp"}
-                fill
-              />
-            </div>
+            <div></div>
+            <div></div>
             <div></div>
           </div>
         </div>
