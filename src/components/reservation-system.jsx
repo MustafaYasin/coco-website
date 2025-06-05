@@ -121,14 +121,27 @@ const ReservationSystem = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
+      {/* Header with Logo */}
+      <div className="absolute top-0 left-0 z-50 p-[20px]">
+        <div 
+          className="relative w-[120px] h-[40px] md:w-[150px] md:h-[50px] cursor-pointer"
+          onClick={() => window.location.href = '/'}
+        >
+          <img 
+            src="/assets/coco_logo.svg" 
+            alt="COCO Tapas & Bar Logo"
+            className="w-full h-full object-contain"
+          />
+        </div>
+      </div>
+
       {/* Hero Section */}
       <div className="relative w-full h-auto py-8 md:h-64" style={{ backgroundColor: '#004529' }}>
         <div className="absolute inset-0 opacity-90" style={{ background: 'linear-gradient(to right, #004529, #003d24)' }}></div>
         <div className="relative z-10 flex items-center justify-center px-4 h-full">
           <div className="text-center">
             <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">Reserve Your Table</h1>
-            <div className="inline-block py-3 px-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg border-2 border-white animate-pulse">
-              <p className="text-sm md:text-xl text-white font-bold"><strong>Special Offer:</strong> Get 15% off all dishes with reservations before 6:30 PM!</p>
+            <div className="inline-block py-3 px-4 rounded-lg border-2 border-white animate-pulse" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}>              <p className="text-sm md:text-xl text-white font-bold"><strong>Special Offer:</strong> Get 15% off all dishes with reservations before 6:30 PM!</p>
             </div>
           </div>
         </div>
