@@ -55,7 +55,6 @@ const FeaturedSection = () => {
             <FeaturedCard
               key={item.name}
               name={item.name}
-              description={item.description}
               image={item.image}
               dietary={item.dietary}
               price={item.price}

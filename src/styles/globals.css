@@ -160,4 +160,27 @@ body {
     padding-top: 60px;
     padding-bottom: 40px;
   }
+  
+  /* Force entire footer to be green on mobile like desktop */
+  .footer-container-mobile {
+    background-color: #45704c !important;
+  }
+  
+  /* Ensure social icons are clickable and visible on mobile */
+  .footer-social-mobile a {
+    pointer-events: auto !important;
+    z-index: 20 !important;
+    position: relative !important;
+  }
+  
+  .footer-social-mobile svg {
+    width: 50px !important;
+    height: 50px !important;
+    z-index: 20 !important;
+  }
+  
+  /* Hide decorative squares/patterns in footer on mobile */
+  .footer-decorative-mobile {
+    display: none !important;
+  }
 }

@@ -5,7 +5,7 @@ import AboutSection from "@/components/about-section";
 import BackgroundSlider from "@/components/background-slider";
 import FeaturedSection from "@/components/featured-section";
 import Footer from "@/components/footer";
-import Header from "@/components/header";
+import Header from "@/components/Header";
 import IntroGridSection from "@/components/into-grid-section";
 import TestimonialSection from "@/components/testimonial-section";
 import dynamic from "next/dynamic";

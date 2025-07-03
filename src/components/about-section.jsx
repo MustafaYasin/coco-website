@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import gsap from "gsap";
 
 const AboutSection = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -95,7 +94,7 @@ const AboutSection = () => {
 
         // Optional mobile-only setup (if you need it)
         mm.add("(max-width: 768px)", () => {
-          console.log("Mobile detected — scroll animations are skipped.");
+          // Mobile animations are skipped
         });
 
         // Refresh ScrollTrigger after hydration

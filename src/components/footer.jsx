@@ -9,8 +9,19 @@ const Footer = () => {
   const [colorState, setColorState] = useState(false); // track color toggle
 
   useEffect(() => {
-    // Run only on the client side
+    // Run only on the client side and only on desktop
     const loadGsap = async () => {
+      // Only run GSAP animation on desktop (768px and above)
+      if (window.innerWidth < 768) {
+        // On mobile, force green background immediately for entire footer
+        const section = backgroundSection.current;
+        if (section) {
+          section.style.backgroundColor = "#45704c";
+          setColorState(true); // Set to green state
+        }
+        return;
+      }
+
       const ScrollTrigger = (await import("gsap/ScrollTrigger")).default;
       gsap.registerPlugin(ScrollTrigger);
 
@@ -48,23 +59,23 @@ const Footer = () => {
   return (
     <div
       ref={backgroundSection}
-      className="z-10 relative md:pt-[10vh] overflow-hidden"
+      className="z-10 relative md:pt-[10vh] overflow-hidden footer-container-mobile"
       style={{ backgroundColor: "#f4e9dd" }}
     >
       <div className="md:w-[1380px] p-0 md:pt-[130px] md:px-[50px] mx-auto">
         <div className="featured !py-0 min-h-[400px] mb-[140px] flex flex-col md:block">
           <div className="float-left w-full p-[40px_6%_20px] md:w-4/6 flex flex-col justify-between md:min-h-[400px] md:p-[40px_60px]">
             <div className="mb-[20px] md:mb-0">
-              <h2 className="text-[2rem] md:text-[3.75rem] font-extrabold leading-[96%] mt-[20px] mb-[10px] font-['Rubik] text-black">
+              <h2 className="text-[2rem] md:text-[3.75rem] font-extrabold leading-[96%] mt-[20px] mb-[10px] font-['Rubik] text-black text-opacity-50">
                 NEWSLETTER
               </h2>
-              <p className="max-w-[52ch] font-medium text-[1rem] md:text-[1.25rem] leading-[128%] ">
+              <p className="max-w-[52ch] font-medium text-[1rem] md:text-[1.25rem] leading-[128%] text-black text-opacity-60">
                 Pellentesque eu, pretium quis, sem consequat. Nulla massa quis
                 enim. Donec pede justo.
               </p>
             </div>
             <form action="">
-              <label className="text-left mt-[10px] font-['Rubik'] text-[1rem] mb-[5px] font-medium leading-[140%]">
+              <label className="text-left mt-[10px] font-['Rubik'] text-[1rem] mb-[5px] font-medium leading-[140%] text-black text-opacity-70">
                 Your Email
               </label>
               <div className="flex flex-col items-start md:flex-row max-w-[550px] md:items-center gap-[20px]">
@@ -84,7 +95,7 @@ const Footer = () => {
             </form>
           </div>
           <div className="w-full md:w-4/12 float-right relative">
-            <div className="min-w-full absolute min-h-[400px]">
+            <div className="min-w-full absolute min-h-[400px] footer-decorative-mobile">
               <Image
                 className="absolute translate-[20%] "
                 src="/assets/bgPattern-dot.png"
@@ -92,13 +103,10 @@ const Footer = () => {
                 alt="Background decorative dot pattern"
               />
             </div>
-            <div className="min-w-full relative h-[400px]">
-              {/* Pizza image removed - was causing broken image error */}
-            </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-[30px] p-[6%]">
-          <h2 className="text-[#f4e9dd] text-[2rem] md:text-[3.75rem] font-extrabold leading-[96%] ">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-[30px] p-[6%] footer-social-mobile">
+          <h2 className="text-[#f4e9dd80] text-[2rem] md:text-[3.75rem] font-extrabold leading-[96%] ">
             FIND US ON
           </h2>
           <div className="flex gap-[15px] md:gap-[30px]">
