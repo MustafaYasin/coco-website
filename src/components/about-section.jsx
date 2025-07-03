@@ -143,7 +143,7 @@ const AboutSection = () => {
               <Image
                 className="object-cover "
                 alt="Tapas Image"
-                src={"/assets/about-img-1.webp"}
+                src={"/assets/ali-kueche.webp"}
                 fill
               />
             </div>
@@ -154,7 +154,7 @@ const AboutSection = () => {
               <Image
                 alt="Tapas Image"
                 className="object-cover "
-                src={"/assets/about-img-2.webp"}
+                src={"/assets/ayad-eingang.webp"}
                 fill
               />
             </div>
@@ -165,7 +165,7 @@ const AboutSection = () => {
               <Image
                 alt="Tapas Image"
                 className="object-cover "
-                src={"/assets/about-img-3.webp"}
+                src={"/assets/peet-treppe.webp"}
                 fill
               />
             </div>
