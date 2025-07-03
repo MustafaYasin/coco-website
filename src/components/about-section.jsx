@@ -92,9 +92,61 @@ const AboutSection = () => {
           });
         });
 
-        // Optional mobile-only setup (if you need it)
+        // Mobile animations
         mm.add("(max-width: 768px)", () => {
-          // Mobile animations are skipped
+          const section = sectionRef.current;
+          const images = imageWrapperRef.current;
+
+          // Set initial rotations for mobile
+          gsap.set(imageRef1.current, { rotation: -15 });
+          gsap.set(imageRef2.current, { rotation: 15 });
+          gsap.set(imageRef3.current, { rotation: -15 });
+
+          // Scroll animation for mobile
+          gsap.to(images, {
+            yPercent: -50,
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: "top center",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          // Rotate images on mobile
+          gsap.to(imageRef1.current, {
+            rotation: 15,
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: "top center",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          gsap.to(imageRef2.current, {
+            rotation: -15,
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: "top center",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+
+          gsap.to(imageRef3.current, {
+            rotation: 15,
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: "top center",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
         });
 
         // Refresh ScrollTrigger after hydration
