@@ -57,7 +57,7 @@ body {
 }
 
 .divider-text {
-  font-size: 5vw;
+  font-size: 3.5vw;
   font-family: "Rubik";
   font-weight: 800;
   text-transform: uppercase;
@@ -99,9 +99,49 @@ body {
   padding-bottom: 140px;
 }
 
+/* Logo color variations */
+.logo-white {
+  filter: brightness(0) invert(1) !important;
+}
+
+.logo-black {
+  filter: none !important;
+}
+
+/* Mobile layout fixes */
+@media only screen and (max-width: 768px) {
+  .mobile-header-buttons {
+    flex-direction: column;
+    gap: 4px;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .mobile-header-buttons button {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    height: 32px;
+  }
+  
+  .mobile-logo-container {
+    margin-left: 8px;
+  }
+  
+  /* Reservation page specific mobile fixes */
+  .reservation-logo-mobile {
+    left: 4px !important;
+    top: 4px !important;
+    padding: 8px !important;
+  }
+  
+  .reservation-hero-mobile {
+    padding-top: 80px !important;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .divider-text {
-    font-size: 6vw;
+    font-size: 4.5vw;
     padding: 4px;
     border-left: 5px solid black;
     border-right: 5px solid black;

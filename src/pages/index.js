@@ -16,11 +16,11 @@ export default function Home() {
     <>
       <Header />
       <HeroSection />
-      <BackgroundSlider text={"Slice to meet you!"} />
+      <BackgroundSlider text={"Munich's First Mediterranean Tapas!"} />
       <IntroGridSection />
       <AboutSection />
       <FeaturedSection />
-      <BackgroundSlider text={"For Foodies Since 2012"} />
+      <BackgroundSlider text={"For Foodies Since 2018"} />
       <TestimonialSection />
       <Footer />
     </>

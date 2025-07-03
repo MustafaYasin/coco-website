@@ -51,6 +51,7 @@ const FeaturedSection = () => {
               name={item.name}
               description={item.description}
               image={item.image}
+              dietary={item.dietary}
             />
           ))}
         </div>

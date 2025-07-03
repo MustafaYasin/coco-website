@@ -60,10 +60,10 @@ const IntroGridSection = () => {
 
         <div className="bg-[#45704c] py-[40px] md:py-0 flex flex-col justify-center items-start px-[4vw]">
           <h2 className="text-[#f4e9dd] font-['Rubik'] uppercase text-[10vw] md:text-[5vw] font-extrabold leading-[98%] mb-[20px]">
-            OUR love is <br />
-            <span className="stroke">Tapas </span>
-            shaped.
-            <br /> Won't you have a slice?
+            MEDITERRANEAN <br />
+            <span className="stroke">TAPAS </span>
+            REIMAGINED.
+            <br /> TASTE THE DIFFERENCE.
           </h2>
           <h2 className="text-[#f4e9dd] font-['Rubik'] uppercase text-[10vw] md:text-[5vw] font-extrabold leading-[98%] mb-[20px]">
             <unknown>😋</unknown>👍

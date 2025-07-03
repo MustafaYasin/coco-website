@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const FeaturedCard = ({ name, description, image }) => {
+const FeaturedCard = ({ name, description, image, dietary }) => {
   return (
     <div className="bg-[#f4e9dd] max-w-[420px] relative">
       <h3 className="text-black uppercase max-w-[12ch] font-['Rubik'] text-[2rem] font-extrabold leading-[96%] absolute top-[4%] left-[6%]">
@@ -18,8 +18,8 @@ const FeaturedCard = ({ name, description, image }) => {
           </div>
         </div>
       </div>
-      <p className="text-[#000] max-w-[20ch] font-['Rubik'] font-bold leading-[106%] absolute inset-[auto_0_4%_6%]">
-        {description}
+      <p className="text-[#45704c] font-['Rubik'] font-bold text-[1.125rem] leading-[106%] absolute inset-[auto_0_4%_6%] whitespace-nowrap">
+        {dietary}
       </p>
     </div>
   );

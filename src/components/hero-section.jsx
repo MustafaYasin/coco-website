@@ -109,8 +109,8 @@ const HeroSection = () => {
           <div className="flex flex-col justify-end w-[600px] md:w-[80px] -rotate-90 md:justify-center absolute top-[0vh]  md:top-[80vh] right-0 md:left-0 bottom-10 rotate">
             <div className="w-[540px] md:w-[80vh] flex items-center">
               <div className="rotate-line hidden md:block" />
-              <h3 className="text-[0.875rem] tracking-[0.8px] md:text-[2rem] font-bold uppercase leading-[32px] md:leading-[40px]">
-                from 12:00 PM everyday
+              <h3 className="text-[1.25rem] tracking-[0.8px] md:text-[2rem] font-bold uppercase leading-[32px] md:leading-[40px]">
+                Tuesday - Saturday from 18:00
               </h3>
             </div>
           </div>
