@@ -37,7 +37,7 @@ export const TapasCardsData = [
   {
     name: "Avocado Tartare",
     description: "Fresh mint | lime juice | roasted pumpkin seeds",
-    image: "/assets/avocado-tatar.webp",
+    image: "/assets/Avocado-tatar.webp",
     dietary: "Vegetarian | Vegan | Gluten-Free",
     price: "11,50",
   },
