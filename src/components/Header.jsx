@@ -1,10 +1,15 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
 const Header = () => {
   return (
     <div className="flex justify-between items-center p-[20px] absolute top-0 left-0 z-20 w-full">
-      <div className="relative w-[120px] h-[40px] md:w-[150px] md:h-[50px] mobile-logo-container">
+      <div 
+        className="relative w-[120px] h-[40px] md:w-[150px] md:h-[50px] mobile-logo-container cursor-pointer"
+        onClick={() => window.location.href = '/'}
+      >
         <Image 
           src="/assets/coco_logo.svg" 
           fill 

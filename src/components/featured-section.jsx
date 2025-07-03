@@ -1,16 +1,22 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import FeaturedCard from "./featured-card";
 import { TapasCardsData } from "../../static-data";
 
 const FeaturedSection = () => {
+  const [isMounted, setIsMounted] = useState(false);
   const textRef = useRef(null);
   const lastScroll = useRef(0);
   const currentX = useRef(0);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const delta = scrollTop - lastScroll.current;
@@ -28,7 +34,7 @@ const FeaturedSection = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isMounted]);
 
   return (
     <div className="featured">
@@ -49,7 +55,6 @@ const FeaturedSection = () => {
             <FeaturedCard
               key={item.name}
               name={item.name}
-              description={item.description}
               image={item.image}
               dietary={item.dietary}
               price={item.price}

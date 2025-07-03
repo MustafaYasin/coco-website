@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const ReservationSystem = () => {
   return (
@@ -31,9 +31,9 @@ const ReservationSystem = () => {
       </div>
       
       {/* TheFork Widget Section */}
-      <div className="flex-grow px-4 py-10">
+      <div className="flex-grow px-4 py-10 pb-20">
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-          <div className="p-6">
+          <div className="p-6 pb-10">
             <div className="text-center mb-6">
               <h2 className="text-2xl font-semibold text-gray-800 mb-2">Make Your Reservation</h2>
               <p className="text-gray-600">Book your table easily through our reservation system</p>
@@ -44,11 +44,12 @@ const ReservationSystem = () => {
               <iframe 
                 src="https://widget.thefork.com/435fc57f-ccd8-48cd-8e0a-bc92afde54ef"
                 width="100%"
-                height="600"
+                height="800"
                 frameBorder="0"
-                scrolling="no"
-                className="rounded-lg"
+                scrolling="yes"
+                className="rounded-lg min-h-[600px] md:min-h-[800px]"
                 title="Restaurant Reservation Widget"
+                style={{ minHeight: '600px' }}
               />
             </div>
           </div>

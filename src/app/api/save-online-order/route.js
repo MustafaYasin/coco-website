@@ -1,17 +1,14 @@
+import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
-
+export async function POST(request) {
   try {
-    const { name, email, timestamp } = req.body;
+    const { name, email, timestamp } = await request.json();
 
     // Validate input
     if (!name || !email) {
-      return res.status(400).json({ message: 'Name and email are required' });
+      return NextResponse.json({ message: 'Name and email are required' }, { status: 400 });
     }
 
     // Create customers directory if it doesn't exist
@@ -39,9 +36,9 @@ export default function handler(req, res) {
 
     console.log('New online order interest saved:', { name, email, timestamp });
 
-    res.status(200).json({ message: 'Data saved successfully' });
+    return NextResponse.json({ message: 'Data saved successfully' });
   } catch (error) {
     console.error('Error saving online order data:', error);
-    res.status(500).json({ message: 'Internal server error' });
+    return NextResponse.json({ message: 'Internal server error' }, { status: 500 });
   }
 }

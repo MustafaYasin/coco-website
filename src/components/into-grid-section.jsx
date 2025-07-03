@@ -1,12 +1,18 @@
 "use client"; // if you're using Next 13+ App Router
 
 import Image from "next/image";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 const IntroGridSection = () => {
+  const [isMounted, setIsMounted] = useState(false);
   const animatedImageRef = useRef(null);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
     const animate = async () => {
       const gsap = (await import("gsap")).default;
       const ScrollTrigger = (await import("gsap/ScrollTrigger")).ScrollTrigger;
@@ -31,10 +37,10 @@ const IntroGridSection = () => {
     if (typeof window !== "undefined" && animatedImageRef.current) {
       animate();
     }
-  }, []);
+  }, [isMounted]);
 
   return (
-    <div className="bg-[url('/assets/bgPattern-dot.png')] bg-center bg-repeat bg-[#f4e9dd] z-20 relative">
+    <div className="bg-[url('/assets/bgPattern-dot.png')] bg-center bg-repeat bg-[#f4e9dd] z-20 relative intro-grid-pattern">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[16px] gap-y-0">
         <div className="min-h-[35vh] md:min-h-[90vh] relative flex flex-col justify-center items-center">
           <div

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,12 +9,18 @@ import ImageBlock from "./image-block";
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
+  const [isMounted, setIsMounted] = useState(false);
   const imageRef1 = useRef(null);
   const imageRef2 = useRef(null);
   const cylinderImage = useRef(null);
   const heartImage = useRef(null);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
     const ctx = gsap.context(() => {
       // Image 1 rotates right on scroll
       gsap.to(imageRef1.current, {
@@ -60,19 +66,19 @@ const HeroSection = () => {
     });
 
     return () => ctx.revert(); // clean up all animations
-  }, []);
+  }, [isMounted]);
 
   return (
     <>
-      <div className="bg-[#004529] absolute md:fixed top-0 left-0 w-[100vw] h-[600px] md:h-[100vh]">
+      <div className="relative bg-[#004529] w-full h-[600px] md:h-[100vh] overflow-hidden">
         <Image
-          className="block md:hidden opacity-20"
+          className="block md:hidden opacity-20 absolute inset-0"
           src="/assets/hero-bg-mobile.svg"
           fill={true}
           alt="Hero Section Background Image"
         />
         <ImageBlock
-          classes="hidden md:block bg-cover min-w-screen min-h-screen h-screen opacity-20"
+          classes="hidden md:block bg-cover w-full h-full opacity-20 absolute inset-0"
           src="/assets/hero-bg.svg"
         />
         <div
@@ -95,9 +101,7 @@ const HeroSection = () => {
             alt="Decorative Image"
           />
         </div>
-      </div>
-      <div className="relative z-10">
-        <div className="h-[600px] md:h-screen w-screen absolute md:fixed top-0 left-0 flex flex-col justify-center items-center z-10">
+        <div className="absolute inset-0 flex flex-col justify-center items-center z-10">
           <h1 className="text-center text-[#f4e9dd] text-[15vw] md:text-[13vw] leading-[84%] max-w-[10ch] font-extrabold">
             <span className="uppercase" style={{ WebkitTextStroke: '4px black' }}>COCO</span>
             <br />
@@ -113,14 +117,6 @@ const HeroSection = () => {
                 Tuesday - Saturday from 18:00
               </h3>
             </div>
-          </div>
-        </div>
-        <div className="w-[90vw] flex flex-col justify-center h-[600px] md:h-auto mx-auto py-0 md:pt-[3vh] md:pb-[50vh] relative z-5">
-          <div className="grid grid-cols-2 gap-x-0 md:gap-x-[24vh] gap-y-[18vh] md:gap-y-[16vw] w-full">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
           </div>
         </div>
       </div>
