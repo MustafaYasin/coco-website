@@ -1,9 +1,80 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import CustomerReviewCard from "./customer-review-card";
 import ImageBlock from "./image-block";
 
 const TestimonialSection = () => {
+  const [isMounted, setIsMounted] = useState(false);
+  const heartRef1 = useRef(null);
+  const heartRef2 = useRef(null);
+  const heartRef3 = useRef(null);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted || typeof window === "undefined") return;
+
+    import("gsap").then((gsapModule) => {
+      const gsap = gsapModule.gsap;
+      import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Set initial state - hearts are invisible and positioned above
+        gsap.set([heartRef1.current, heartRef2.current, heartRef3.current], {
+          opacity: 0,
+          y: -50,
+          scale: 0.5,
+        });
+
+        // Animate hearts landing one after another
+        gsap.to(heartRef1.current, {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          ease: "bounce.out",
+          scrollTrigger: {
+            trigger: heartRef1.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        });
+
+        gsap.to(heartRef2.current, {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          ease: "bounce.out",
+          delay: 0.2,
+          scrollTrigger: {
+            trigger: heartRef1.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        });
+
+        gsap.to(heartRef3.current, {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          ease: "bounce.out",
+          delay: 0.4,
+          scrollTrigger: {
+            trigger: heartRef1.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
+    });
+  }, [isMounted]);
   return (
     <div className="bg-[#f4e9dd] pt-[40px] pb-0 md:pt-[140px] md:pb-[100px] relative overflow-hidden z-10">
       <div className="absolute inset-0">
@@ -25,21 +96,21 @@ const TestimonialSection = () => {
           We spend our days enjoying what we do and our customers love it!
         </h2>
         <div className="flex gap-[8px] justify-center mt-0 mb-[40px] md:my-[60px] max-h-[1.5rem]">
-          <div className="relative w-[44px] h-[24px] md:h-[44px]">
+          <div ref={heartRef1} className="relative w-[44px] h-[24px] md:h-[44px]">
             <Image
               src="/assets/Decorative-graphic-heart.svg"
               fill
               alt="Decorative Image"
             />
           </div>
-          <div className="relative w-[44px] h-[24px] md:h-[44px]">
+          <div ref={heartRef2} className="relative w-[44px] h-[24px] md:h-[44px]">
             <Image
               src="/assets/Decorative-graphic-heart.svg"
               fill
               alt="Decorative Image"
             />
           </div>
-          <div className="relative w-[44px] h-[24px] md:h-[44px]">
+          <div ref={heartRef3} className="relative w-[44px] h-[24px] md:h-[44px]">
             <Image
               src="/assets/Decorative-graphic-heart.svg"
               fill
