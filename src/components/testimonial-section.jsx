@@ -49,7 +49,7 @@ const TestimonialSection = () => {
         </div>
         <div className="columns-2 lg:columns-3 gap-4 space-y-4">
           <div className="break-inside-avoid">
-            <CustomerReviewCard text="Excellent pizza at a fair price. The restaurant does delivery and has some tables to stay. It's not big but worth to buy pizza there. The pleasure of having a pizza that just left the wood oven is awesome!" />
+            <CustomerReviewCard text="Amazing Mediterranean tapas experience! The flavors are incredibly authentic and fresh. Each dish tells a story of the Mediterranean coast. The Avocado Tartare and Burratina are absolutely divine!" />
           </div>
           <div className="break-inside-avoid">
             <ImageBlock
@@ -65,7 +65,7 @@ const TestimonialSection = () => {
           </div>
 
           <div className="break-inside-avoid">
-            <CustomerReviewCard text="Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo." />
+            <CustomerReviewCard text="The quality of ingredients is outstanding! You can taste the freshness in every bite. The Scampi and Beef Tartare are prepared to perfection. This is authentic Mediterranean cuisine at its finest." />
           </div>
           <div className="break-inside-avoid">
             <ImageBlock
@@ -75,7 +75,7 @@ const TestimonialSection = () => {
           </div>
 
           <div className="break-inside-avoid">
-            <CustomerReviewCard text="Perfect take-away! Wish they were more than that! This pizza is so good it blows your mind away. They look like a family run business. There is an eating area but it's small, I guess that's for waiting the delivery. The outside has a very beautiful orange sign that invites you in, boy that's some good-fresh tasty pizza! Great for take-aways, not so great if you want to eat inside." />
+            <CustomerReviewCard text="COCO Munich has redefined Mediterranean dining for me! The tapas are perfectly crafted with French and Italian influences. The atmosphere is cozy and the staff genuinely cares about your experience. A hidden gem in Munich!" />
           </div>
           <div className="break-inside-avoid">
             <ImageBlock

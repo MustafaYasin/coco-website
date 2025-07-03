@@ -51,7 +51,7 @@ const OrderOnlineSystem = () => {
             <img 
               src="/assets/coco_logo.svg" 
               alt="COCO Tapas & Bar Logo"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain logo-black"
             />
           </div>
         </div>
@@ -116,7 +116,7 @@ const OrderOnlineSystem = () => {
           <img 
             src="/assets/coco_logo.svg" 
             alt="COCO Tapas & Bar Logo"
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain logo-black"
           />
         </div>
       </div>

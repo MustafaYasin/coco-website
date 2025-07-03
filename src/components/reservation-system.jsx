@@ -4,7 +4,7 @@ const ReservationSystem = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Header with Logo */}
-      <div className="absolute top-0 left-0 z-50 p-[20px]">
+      <div className="absolute top-0 left-0 z-50 p-[20px] reservation-logo-mobile">
         <div 
           className="relative w-[120px] h-[40px] md:w-[150px] md:h-[50px] cursor-pointer"
           onClick={() => window.location.href = '/'}
@@ -12,13 +12,13 @@ const ReservationSystem = () => {
           <img 
             src="/assets/coco_logo.svg" 
             alt="COCO Tapas & Bar Logo"
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain logo-white"
           />
         </div>
       </div>
 
       {/* Hero Section */}
-      <div className="relative w-full h-auto py-8 md:h-64" style={{ backgroundColor: '#004529' }}>
+      <div className="relative w-full h-auto py-8 md:h-64 reservation-hero-mobile" style={{ backgroundColor: '#004529' }}>
         <div className="absolute inset-0 opacity-90" style={{ background: 'linear-gradient(to right, #004529, #003d24)' }}></div>
         <div className="relative z-10 flex items-center justify-center px-4 h-full">
           <div className="text-center">
