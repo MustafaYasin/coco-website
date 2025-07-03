@@ -124,10 +124,10 @@ const AboutSection = () => {
             <br /> IT LED ME TO
             <br /> TAPAS
           </h2>
-          <p className="max-w-[52ch] mb-[20px] text-[1rem] md:text-[1.25rem] leading-[128%] text-black font-medium font-['Rubik']">
+          <p className="max-w-[52ch] mb-[20px] text-[1.1rem] md:text-[1.5rem] leading-[128%] text-black font-medium font-['Rubik']">
             Since 2018, we've been bringing the diversity of Mediterranean cuisine to Barer Straße. Our passion is creating unforgettable culinary experiences with fresh, high-quality ingredients and natural spices.
           </p>
-          <p className="max-w-[52ch] mb-[20px] text-[1rem] md:text-[1.25rem] leading-[128%] text-black font-medium font-['Rubik']">
+          <p className="max-w-[52ch] mb-[20px] text-[1.1rem] md:text-[1.5rem] leading-[128%] text-black font-medium font-['Rubik']">
             <strong>We cater to every taste:</strong> From succulent meats and fresh seafood to extensive <strong>VEGETARIAN</strong>, <strong>VEGAN</strong>, and <strong>GLUTEN-FREE</strong> options. Everyone finds their perfect tapas experience at COCO Munich.
           </p>
         </div>

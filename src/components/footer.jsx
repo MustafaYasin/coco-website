@@ -70,8 +70,7 @@ const Footer = () => {
                 NEWSLETTER
               </h2>
               <p className="max-w-[52ch] font-medium text-[1rem] md:text-[1.25rem] leading-[128%] text-black text-opacity-60">
-                Pellentesque eu, pretium quis, sem consequat. Nulla massa quis
-                enim. Donec pede justo.
+                Stay updated with our latest Mediterranean tapas creations, special events, and exclusive offers from COCO Munich.
               </p>
             </div>
             <form action="">
