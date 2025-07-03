@@ -89,6 +89,7 @@ const Footer = () => {
                 className="absolute translate-[20%] "
                 src="/assets/bgPattern-dot.png"
                 fill
+                alt="Background decorative dot pattern"
               />
             </div>
             <div className="min-w-full relative h-[400px]">

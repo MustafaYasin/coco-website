@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 
 const AboutSection = () => {
+  const [isMounted, setIsMounted] = useState(false);
   const sectionRef = useRef(null);
   const imageWrapperRef = useRef(null);
   const imageRef1 = useRef(null);
@@ -12,7 +13,11 @@ const AboutSection = () => {
   const imageRef3 = useRef(null);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted || typeof window === "undefined") return;
 
     import("gsap").then((gsapModule) => {
       const gsap = gsapModule.gsap;
@@ -30,7 +35,7 @@ const AboutSection = () => {
           gsap.set(imageRef2.current, { rotation: 15 });
           gsap.set(imageRef3.current, { rotation: -15 });
 
-          // Pin section
+          // Pin section - re-enabled with proper hydration handling
           ScrollTrigger.create({
             trigger: section,
             start: "top top",
@@ -38,6 +43,7 @@ const AboutSection = () => {
             pin: true,
             scrub: true,
             anticipatePin: 1,
+            refreshPriority: -1, // Ensure this runs after other ScrollTriggers
           });
 
           // Scroll animation
@@ -92,22 +98,27 @@ const AboutSection = () => {
           console.log("Mobile detected — scroll animations are skipped.");
         });
 
+        // Refresh ScrollTrigger after hydration
+        setTimeout(() => {
+          ScrollTrigger.refresh();
+        }, 100);
+
         // Cleanup
         return () => mm.revert();
       });
     });
-  }, []);
+  }, [isMounted]);
 
   return (
     <div
       ref={sectionRef}
-      className="bg-[#dd5f42] relative z-10 bg-[url('/assets/about-bg.png')] overflow-visible about-bg-size bg-repeat"
+      className="bg-[#dd5f42] relative bg-[url('/assets/about-bg.png')] overflow-visible about-bg-size bg-repeat"
     >
-      <div className="h-[100vh] min-h-[700px] p-0 md:p-[5vh] sticky top-0 left-0">
+      <div className="h-[100vh] min-h-[700px] p-0 md:p-[5vh] sticky top-0 left-0 z-0">
         <div className="bg-sun-rotation"></div>
       </div>
       <div className="relative z-10 -mt-[100vh] inset-[auto_0_0_auto] overflow-hidden flex flex-col md:block md:overflow-visible">
-        <div className="float-left w-full flex flex-col justify-center items-start md:w-[55%] h-auto md:h-[100vh] min-h-auto md:min-h-[700px] pt-[6vh] md:pt-0 px-[6%] md:pl-[14vh] md:pr-[4vh] sticky top-0 left-0">
+        <div className="float-left w-full flex flex-col justify-center items-start md:w-[55%] h-auto md:h-[100vh] min-h-auto md:min-h-[700px] pt-[6vh] md:pt-0 px-[6%] md:pl-[14vh] md:pr-[4vh] sticky top-0 left-0 z-10">
           <h2 className="text-[#f4e9dd] uppercase text-left mb-[20px] font-['Rubik'] text-[9vw] md:text-[5vw] font-extrabold leading-[98%]">
             I FOLLOWED <br />
             MY HEART AND

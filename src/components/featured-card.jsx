@@ -9,12 +9,12 @@ const FeaturedCard = ({ name, description, image, dietary, price }) => {
       </h3>
       <div className="p-[10%] flex relative">
         <div className="relative w-full h-[500px]">
-          <Image src={image} fill objectFit="contain" />
+          <Image src={image} fill objectFit="contain" alt={`${name} - Mediterranean tapas dish`} />
           <div className="w-[72px] h-[72px] absolute top-[5%] right-[5%]">
-            <Image src="/assets/Decorative-small-cylinder.svg" fill />
+            <Image src="/assets/Decorative-small-cylinder.svg" fill alt="Decorative cylinder element" />
           </div>
           <div className="w-[72px] h-[72px] absolute bottom-[5%] left-[5%]">
-            <Image src="/assets/Decorative-small-cube.svg" fill />
+            <Image src="/assets/Decorative-small-cube.svg" fill alt="Decorative cube element" />
           </div>
         </div>
       </div>

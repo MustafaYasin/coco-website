@@ -8,16 +8,16 @@ const TestimonialSection = () => {
     <div className="bg-[#f4e9dd] pt-[40px] pb-0 md:pt-[140px] md:pb-[100px] relative overflow-hidden z-10">
       <div className="absolute inset-0">
         <div className="w-[20vw] h-[20vw] absolute inset-0">
-          <Image src="/assets/bgPattern-dot.png" fill />
+          <Image src="/assets/bgPattern-dot.png" fill alt="Background decorative dot pattern" />
         </div>
         <div className="w-[20vw] h-[20vw] absolute inset-[20%_0%_auto_auto]">
-          <Image src="/assets/bgPattern-dot.png" fill />
+          <Image src="/assets/bgPattern-dot.png" fill alt="Background decorative dot pattern" />
         </div>
         <div className="w-[20vw] h-[20vw] absolute inset-[60%_auto_auto_0]">
-          <Image src="/assets/bgPattern-dot.png" fill />
+          <Image src="/assets/bgPattern-dot.png" fill alt="Background decorative dot pattern" />
         </div>
         <div className="md:w-[75px] md:h-[75px] w-[40px] h-[40px] absolute top-[20px] md:top-[5%] right-[5%] md:right-[20%]">
-          <Image src="/assets/bg-message.svg" fill />
+          <Image src="/assets/bg-message.svg" fill alt="Decorative message bubble" />
         </div>
       </div>
       <div className="md:max-w-[1380px] max-w-[400px] z-10 p-[6%] md:px-[50px] mx-auto relative">
@@ -86,16 +86,16 @@ const TestimonialSection = () => {
         </div>
         <div className="flex md:p-[40px_100px] py-[40px] gap-[16px] flex-wrap justify-around items-center">
           <div className="w-[160px] h-[160px] relative">
-            <Image src="/assets/ReviewSticker-1.webp" fill />
+            <Image src="/assets/ReviewSticker-1.webp" fill alt="Customer review badge 1" />
           </div>
           <div className="w-[160px] h-[160px] relative">
-            <Image src="/assets/ReviewSticker-2.webp" fill />
+            <Image src="/assets/ReviewSticker-2.webp" fill alt="Customer review badge 2" />
           </div>
           <div className="w-[160px] h-[160px] relative">
-            <Image src="/assets/ReviewSticker-3.webp" fill />
+            <Image src="/assets/ReviewSticker-3.webp" fill alt="Customer review badge 3" />
           </div>
           <div className="w-[160px] h-[160px] relative">
-            <Image src="/assets/ReviewSticker-4.webp" fill />
+            <Image src="/assets/ReviewSticker-4.webp" fill alt="Customer review badge 4" />
           </div>
         </div>
       </div>
