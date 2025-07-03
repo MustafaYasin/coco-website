@@ -183,4 +183,16 @@ body {
   .footer-decorative-mobile {
     display: none !important;
   }
+  
+  /* Adjust intro grid pattern density for mobile */
+  .intro-grid-pattern {
+    background-size: 78px 78px !important;
+  }
+}
+
+/* Desktop pattern density adjustment */
+@media only screen and (min-width: 769px) {
+  .intro-grid-pattern {
+    background-size: 120px 120px !important;
+  }
 }

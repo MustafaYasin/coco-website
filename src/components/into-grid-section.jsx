@@ -40,7 +40,7 @@ const IntroGridSection = () => {
   }, [isMounted]);
 
   return (
-    <div className="bg-[url('/assets/bgPattern-dot.png')] bg-center bg-repeat bg-[#f4e9dd] z-20 relative">
+    <div className="bg-[url('/assets/bgPattern-dot.png')] bg-center bg-repeat bg-[#f4e9dd] z-20 relative intro-grid-pattern">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[16px] gap-y-0">
         <div className="min-h-[35vh] md:min-h-[90vh] relative flex flex-col justify-center items-center">
           <div
